@@ -59,49 +59,50 @@ if has('gui_running')
     set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline
 endif
 
+" Show line number.
 se nu
-" Tab move
-" Move  for mac users (using the 'apple' key)
-map <D-S-]> gt
-map <D-S-[> gT
-map <D-1> 1gt
-map <D-2> 2gt
-map <D-3> 3gt
-map <D-4> 4gt
-map <D-5> 5gt
-map <D-6> 6gt
-map <D-7> 7gt
-map <D-8> 8gt
-map <D-9> 9gt
-map <D-0> :tablast<CR>
 
-" for linux and windows users (using the control key)
-map <C-S-]> gt
-map <C-S-[> gT
-map <C-1> 1gt
-map <C-2> 2gt
-map <C-3> 3gt
-map <C-4> 4gt
-map <C-5> 5gt
-map <C-6> 6gt
-map <C-7> 7gt
-map <C-8> 8gt
-map <C-9> 9gt
-map <C-0> :tablast<CR>
+" Tab move
+map <C-]> :bnext<CR>
+map <C-[> :bprev<CR>
 
 " Window split
 set splitbelow
 set splitright
+
 " Window move
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
 
 " Convert tab to 4 spaces.
 set expandtab
 set tabstop=4
 set shiftwidth=4
+
+" This allows buffers to be hidden if you've modified a buffer.
+" " This is almost a must if you wish to use buffers in this way.
+set hidden
+
+" Change leader as comma
+let mapleader=","
+
+" Toggle, find in NERDTree
+nnoremap <C-F> :NERDTreeFind<CR>
+nnoremap <Leader>n :NERDTreeToggle<CR>
+
+" Ignore on ctrlp
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+  \}
+
+" Easymotion use single leader than default double leaders.
+map <Leader> <Plug>(easymotion-prefix)
+
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -112,3 +113,4 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'valloric/youcompleteme'
+Plugin 'terryma/vim-multiple-cursors'
