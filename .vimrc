@@ -81,10 +81,6 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
-" This allows buffers to be hidden if you've modified a buffer.
-" " This is almost a must if you wish to use buffers in this way.
-set hidden
-
 " Change leader as comma
 let mapleader=","
 
