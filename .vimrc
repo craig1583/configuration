@@ -89,3 +89,6 @@ let g:ctrlp_custom_ignore = {
 
 " Easymotion use single leader than default double leaders.
 map <Leader> <Plug>(easymotion-prefix)
+
+" show current command
+set showcmd
