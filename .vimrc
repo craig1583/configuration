@@ -20,6 +20,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'valloric/youcompleteme'
 Plugin 'ervandew/supertab'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
