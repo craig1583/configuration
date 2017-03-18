@@ -17,17 +17,14 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'valloric/youcompleteme'
 Plugin 'ervandew/supertab'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " Keybindings for UltiSnips, all of these are ctrl + key                                                         
@@ -71,6 +68,7 @@ nnoremap <C-H> <C-W>h
 set expandtab
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
 
 " Change leader as comma
 let mapleader=","
