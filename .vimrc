@@ -10,7 +10,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets' " Default snippets for ultisnips
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
@@ -24,8 +23,6 @@ Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " Keybindings for UltiSnips, all of these are ctrl + key                                                         
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -51,24 +48,23 @@ endif
 se nu
 
 " Tab move
-map <C-]> :bnext<CR>
-map <C-[> :bprev<CR>
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-h> :bprev<CR>
 
 " Window split
 set splitbelow
 set splitright
 
 " Window move
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-L> <C-W>l
-nnoremap <C-H> <C-W>h
+"nnoremap <C-J> <C-W>j
+"nnoremap <C-K> <C-W>k
+"nnoremap <C-L> <C-W>l
+"nnoremap <C-H> <C-W>h
 
 " Convert tab to 4 spaces.
 set expandtab
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
 
 " Change leader as comma
 let mapleader=","
@@ -90,3 +86,7 @@ map <Leader> <Plug>(easymotion-prefix)
 
 " show current command
 set showcmd
+
+" ctags
+set tags+=~/os-team3/tags
+cs add ~/os-team3/cscope.out
