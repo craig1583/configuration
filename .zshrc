@@ -94,4 +94,6 @@ mkcd() {
 }
 
 # added by Anaconda3 4.2.0 installer
-export PATH="/Users/scan/anaconda/bin:$PATH"
+export PATH="/Users/scan/anaconda3/bin:$PATH"
+export PATH="/usr/local/opt/protobuf@2.5/bin:$PATH"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/jre"
