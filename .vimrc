@@ -30,6 +30,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " vim-colors-solarized
+se t_Co=256
 syntax enable
 set background=light
 let g:solarized_termcolors=256
@@ -75,11 +76,8 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 
 " Ignore on ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
-  \ }
 
 " Easymotion use single leader than default double leaders.
 map <Leader> <Plug>(easymotion-prefix)
@@ -90,3 +88,6 @@ set showcmd
 " ctags
 set tags+=~/os-team3/tags
 cs add ~/os-team3/cscope.out
+
+" C++
+ab #include <> inc
