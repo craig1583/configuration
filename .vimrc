@@ -88,6 +88,3 @@ set showcmd
 " ctags
 set tags+=~/os-team3/tags
 cs add ~/os-team3/cscope.out
-
-" C++
-ab #include <> inc
